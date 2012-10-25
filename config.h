@@ -53,23 +53,23 @@ Layout layouts[] = {
 	{ "[ ]", fullscreen },
 };
 
-#define MOD CTRL('g')
+#define MOD CTRL('a')
 
 /* you can at most specifiy MAX_ARGS (2) number of arguments */
 Key keys[] = {
 	{ MOD, 'c',       { create,         { NULL }                    } },
 	{ MOD, 'x',       { killclient,     { NULL }                    } },
-	{ MOD, 'j',       { focusnext,      { NULL }                    } },
-	{ MOD, 'u',       { focusnextnm,    { NULL }                    } },
-	{ MOD, 'i',       { focusprevnm,    { NULL }                    } },
-	{ MOD, 'k',       { focusprev,      { NULL }                    } },
+	{ MOD, 'l',       { focusnext,      { NULL }                    } },
+	{ MOD, 'j',       { focusnextnm,    { NULL }                    } },
+	{ MOD, 'k',       { focusprevnm,    { NULL }                    } },
+	{ MOD, 'h',       { focusprev,      { NULL }                    } },
 	{ MOD, 't',       { setlayout,      { "[]=" }                   } },
 	{ MOD, 'g',       { setlayout,      { "+++" }                   } },
 	{ MOD, 'b',       { setlayout,      { "TTT" }                   } },
 	{ MOD, 'm',       { setlayout,      { "[ ]" }                   } },
 	{ MOD, ' ',       { setlayout,      { NULL }                    } },
-	{ MOD, 'h',       { setmfact,       { "-0.05" }                 } },
-	{ MOD, 'l',       { setmfact,       { "+0.05" }                 } },
+	{ MOD, 'u',       { setmfact,       { "-0.05" }                 } },
+	{ MOD, 'i',       { setmfact,       { "+0.05" }                 } },
 	{ MOD, '.',       { toggleminimize, { NULL }                    } },
 	{ MOD, 's',       { togglebar,      { NULL }                    } },
 	{ MOD, 'M',       { togglemouse,    { NULL }                    } },

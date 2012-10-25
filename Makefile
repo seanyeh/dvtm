@@ -40,7 +40,7 @@ dist: clean
 
 install: dvtm
 	@echo stripping executable
-	@strip -s dvtm
+	@gstrip -s dvtm
 	@echo installing executable file to ${DESTDIR}${PREFIX}/bin
 	@mkdir -p ${DESTDIR}${PREFIX}/bin
 	@cp -f dvtm ${DESTDIR}${PREFIX}/bin

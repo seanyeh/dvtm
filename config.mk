@@ -6,8 +6,8 @@ VERSION = 0.7
 PREFIX = /usr/local
 MANPREFIX = ${PREFIX}/share/man
 
-INCS = -I. -I/usr/include -I/usr/local/include
-LIBS = -lc -lutil -lncursesw
+INCS = -I. -I/usr/local/include -I/usr/include
+LIBS = -lc -lutil -lncurses
 # NetBSD
 #LIBS = -lc -lutil -lcurses
 # AIX
@@ -16,7 +16,7 @@ LIBS = -lc -lutil -lncursesw
 #INCS += -I/usr/include/ncurses
 
 CFLAGS += -std=c99 -Os ${INCS} -DVERSION=\"${VERSION}\" -DNDEBUG
-LDFLAGS += -L/usr/lib -L/usr/local/lib ${LIBS}
+LDFLAGS += -L/usr/local/lib -L/usr/lib ${LIBS}
 
 DEBUG_CFLAGS = ${CFLAGS} -UNDEBUG -O0 -g -ggdb -Wall
 
